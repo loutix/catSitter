@@ -2,12 +2,15 @@
 session_start();
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\PHPMailer;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
+
+// loading file .env
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 if (isset($_POST['submitContact'])) {
 
@@ -24,13 +27,12 @@ if (isset($_POST['submitContact'])) {
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
 
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-        $mail->Username   = 'loicdubrulle2975@gmail.com';                     //SMTP username
-        $mail->Password   = 'hbbgrlknoapbryvl';                               //SMTP password
+        $mail->Host       = $_ENV['SMTP_HOST'];                     //Set the SMTP server to send through
+        $mail->Username   = $_ENV['SMTP_USERNAME'];                     //SMTP username
+        $mail->Password   = $_ENV['SMTP_PASSWORD'];                               //SMTP password
 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
         $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
@@ -40,8 +42,8 @@ if (isset($_POST['submitContact'])) {
 
 
         //Recipients
-        $mail->setFrom('loicdubrulle2975@gmail.com', 'Contact garde chat');
-        $mail->addAddress('loicdubrulle2975@gmail.com', 'Demande contact');     //Add a recipient
+        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Contact garde chat');
+        $mail->addAddress($_ENV['SMTP_USERNAME'], 'Demande contact');     //Add a recipient
         
         // $mail->addAddress('ellen@example.com');               //Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');

@@ -219,7 +219,7 @@
             <!-- phone  -->
             <div class="form-group my-2">
                 <label for="phone">Téléphone</label>
-                <input type="tel" class="form-control" id="phone" name="phone" pattern="^0[1-9](\s\d{2}){4}$" placeholder="Format : 06 12 34 56 78" required>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="^0[1-9](\d{2}|\s\d{2}){4}$" placeholder="Format : 06 12 34 56 78" required>
             </div>
 
             <!--  Email -->
