@@ -42,8 +42,8 @@ if (isset($_POST['submitContact'])) {
 
 
         //Recipients
-        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Contact garde chat');
-        $mail->addAddress($_ENV['SMTP_USERNAME'], 'Demande contact');     //Add a recipient
+        $mail->setFrom($_ENV['SMTP_USERNAME'], 'Contact garde animaux');
+        $mail->addAddress($_ENV['SMTP_USERNAME'], 'Contact garde animaux');     //Add a recipient
 
         // $mail->addAddress('ellen@example.com');               //Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
@@ -58,10 +58,10 @@ if (isset($_POST['submitContact'])) {
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Nouvelle demande pour animaux';
         $mail->Body =
-            '<h3>Bonjour, vous avez reçu une nouvelle demande</h3>
-            <h4>Prénom :' . $first_name . '</h4>
+            '<h3>Bonjour, vous avez recu une nouvelle demande</h3>
+            <h4>Prenom :' . $first_name . '</h4>
             <h4>Nom : ' . $last_name . '</h4>
-            <h4>Téléphone : ' . $phone . '</h4>
+            <h4>Telephone : ' . $phone . '</h4>
             <h4>Email : ' . $email . '</h4>
             <h4>Animal : ' . $animal . '</h4>
             <h4>Message : ' . $message . '</h4>';
