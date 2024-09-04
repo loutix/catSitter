@@ -5,9 +5,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
+  <meta name="description"
+    content="Jeune retraitée à Castres, je propose des services de garde pour vos chats et chiens : visites à domicile, promenades, et envoi de nouvelles régulières pour votre tranquillité d'esprit.">
   <meta name="author" content="" />
-  <title>GardeChatChienCastres.fr</title>
+  <title>Service de garde pour chats et chiens à Castres - Visites à domicile et promenades</title>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
   <!-- Font Awesome icons (free version)-->
@@ -57,7 +58,7 @@
         Votre tranquillité d'esprit, leur bonheur assuré !
       </div>
       <div class="masthead-heading text-uppercase">
-        Garde chat Chien Castres
+        Service de garde pour chats et chiens à Castres
       </div>
       <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Prendre contact</a>
     </div>
@@ -129,7 +130,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chat3.jpg" alt="chat ziggy" />
+              <img class="img-fluid" src="assets/img/portfolio/chat3.jpg" alt="Ziggy, chat tigré gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Ziggy</div>
@@ -148,7 +149,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chien2.jpg" alt="chien naya" />
+              <img class="img-fluid" src="assets/img/portfolio/chien2.jpg" alt="Naya, Teckel gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Naya</div>
@@ -167,7 +168,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chat1.jpg" alt="..." />
+              <img class="img-fluid" src="assets/img/portfolio/chat1.jpg" alt="Zoé, Chat de Birmanie gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Zoé</div>
@@ -186,7 +187,8 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chien1.jpg" alt="..." />
+              <img class="img-fluid" src="assets/img/portfolio/chien1.jpg"
+                alt="Sam, chien Border Collie gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Sam</div>
@@ -205,7 +207,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chien3.jpg" alt="..." />
+              <img class="img-fluid" src="assets/img/portfolio/chien3.jpg" alt="Igor, chien Drathaar gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Igor</div>
@@ -224,7 +226,7 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/portfolio/chat2.jpg" alt="..." />
+              <img class="img-fluid" src="assets/img/portfolio/chat2.jpg" alt="Caramel, chat Siamois gardé à Castres" />
             </a>
             <div class="portfolio-caption">
               <div class="portfolio-caption-heading">Caramel</div>
