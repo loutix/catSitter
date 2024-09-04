@@ -41,7 +41,7 @@
             <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Album</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
