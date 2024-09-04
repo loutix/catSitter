@@ -28,14 +28,14 @@ if (isset($_POST['submitContact'])) {
     try {
         //Server settings
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->SMTPAuth = true;                                   //Enable SMTP authentication
 
-        $mail->Host       = $_ENV['SMTP_HOST'];                     //Set the SMTP server to send through
-        $mail->Username   = $_ENV['SMTP_USERNAME'];                     //SMTP username
-        $mail->Password   = $_ENV['SMTP_PASSWORD'];                               //SMTP password
+        $mail->Host = $_ENV['SMTP_HOST'];                              //Set the SMTP server to send through
+        $mail->Username = $_ENV['SMTP_USERNAME'];                     //SMTP username
+        $mail->Password = $_ENV['SMTP_PASSWORD'];                     //SMTP password
 
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
-        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->Port = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         //$mail->Port       = 465;    
@@ -44,7 +44,7 @@ if (isset($_POST['submitContact'])) {
         //Recipients
         $mail->setFrom($_ENV['SMTP_USERNAME'], 'Contact garde chat');
         $mail->addAddress($_ENV['SMTP_USERNAME'], 'Demande contact');     //Add a recipient
-        
+
         // $mail->addAddress('ellen@example.com');               //Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
         // $mail->addCC('cc@example.com');
@@ -57,20 +57,20 @@ if (isset($_POST['submitContact'])) {
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Nouvelle demande pour animaux';
-        $mail->Body    = 
-        '<h3>Bonjour, vous avez reçu une nouvelle demande</h3>
-            <h4>Prénom :'.$first_name.'</h4>
-            <h4>Nom : '.$last_name.'</h4>
-            <h4>Téléphone : '.$phone.'</h4>
-            <h4>Email : '.$email.'</h4>
-            <h4>Animal : '.$animal.'</h4>
-            <h4>Message : '.$message.'</h4>';
+        $mail->Body =
+            '<h3>Bonjour, vous avez reçu une nouvelle demande</h3>
+            <h4>Prénom :' . $first_name . '</h4>
+            <h4>Nom : ' . $last_name . '</h4>
+            <h4>Téléphone : ' . $phone . '</h4>
+            <h4>Email : ' . $email . '</h4>
+            <h4>Animal : ' . $animal . '</h4>
+            <h4>Message : ' . $message . '</h4>';
 
-        if($mail->send()){
+        if ($mail->send()) {
             $_SESSION['status'] = "Merci pour votre message, je vous contacterai rapidement";
             header("Location: {$_SERVER["HTTP_REFERER"]}");
             exit(0);
-        } else{
+        } else {
             $_SESSION['status'] = "Erreur message non envoyé. Mail erreur : {$mail->ErrorInfo}";
             header("Location: {$_SERVER["HTTP_REFERER"]}");
             exit(0);
